@@ -1,4 +1,4 @@
-package chapter1_arrays_strings;
+package chapter1;
 
 public class Question1 {
 
