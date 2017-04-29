@@ -6,21 +6,21 @@ package chapter2;
  * (i.e., any node but the first and last node, not necessarily the exact
  * middle) of a singly linked list, given only access to that node. EXAMPLE
  * 
- * Input: 
- * the node c from the linked list a -> b -> c -> d -> e -> f 
+ * Input: the node c from the linked list a -> b -> c -> d -> e -> f
  * 
- * Result:
- * nothing is returned, but the new linked list looks like a -> b -> d -> e -> f
+ * Result: nothing is returned, but the new linked list looks like a -> b -> d
+ * -> e -> f
  * 
  */
 
 public class Question3 {
 
-	public static void deleteMiddleNode(LinkedListNode<Character> middle) {
-		if (middle != null && middle.next != null) {
-			middle.value = middle.next.value;
-			middle.next = middle.next.next;
-		}
+	public static boolean deleteMiddleNode(LinkedListNode<Character> middle) {
+		if (middle == null || middle.next == null)
+			return false;
+		middle.value = middle.next.value;
+		middle.next = middle.next.next;
+		return true;
 	}
 
 	public static void main(String[] args) {
