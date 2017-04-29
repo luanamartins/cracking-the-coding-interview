@@ -17,7 +17,6 @@ public class Question4 {
 	public static LinkedList<Integer> partition(LinkedList<Integer> list, int partition) {
 		LinkedList<Integer> smallOnes = new LinkedList<>();
 		LinkedList<Integer> highOnes = new LinkedList<>();
-		LinkedList<Integer> partitionOnes = new LinkedList<>();
 
 		for (Integer item : list) {
 			if (item < partition) {
@@ -25,11 +24,10 @@ public class Question4 {
 			} else if (item > partition) {
 				highOnes.add(item);
 			} else {
-				partitionOnes.add(item);
+				highOnes.add(0, item);
 			}
 		}
 
-		smallOnes.addAll(partitionOnes);
 		smallOnes.addAll(highOnes);
 
 		return smallOnes;
@@ -51,7 +49,5 @@ public class Question4 {
 		for (Integer item : list) {
 			System.out.print(item + " ");
 		}
-
 	}
-
 }
