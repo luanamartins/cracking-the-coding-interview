@@ -30,4 +30,8 @@ public class TreeNode {
 		this.right = right;
 	}
 
+	public String toString(){
+		return String.valueOf(this.value);
+	}
+	
 }
