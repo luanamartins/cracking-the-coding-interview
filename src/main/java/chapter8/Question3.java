@@ -11,11 +11,12 @@ package chapter8;
 
 public class Question3 {
 
-	public static int magicIndex(int[] array){
-		if(array == null) return -1;
+	public static int magicIndex(int[] array) {
+		if (array == null)
+			return -1;
 		return magicIndex(array, 0, array.length);
 	}
-	
+
 	private static int magicIndex(int[] array, int low, int high) {
 		if (low > high) {
 			return -1;
@@ -37,9 +38,9 @@ public class Question3 {
 		array[2] = 2;
 		array[3] = 5;
 		array[4] = 7;
-		array[5] = 8; 
+		array[5] = 8;
 		array[6] = 9;
-		
+
 		System.out.println(magicIndex(array));
 	}
 
