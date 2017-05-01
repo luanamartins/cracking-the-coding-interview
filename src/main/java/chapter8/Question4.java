@@ -32,10 +32,10 @@ public class Question4 {
 	}
 
 	public static List<Set<Integer>> cloneSet(List<Set<Integer>> source) {
-		List<Set<Integer>> copy = new ArrayList<Set<Integer>>();
+		List<Set<Integer>> copy = new ArrayList<>();
 		Set<Integer> copySet;
 		for (Set<Integer> item : source) {
-			copySet = new HashSet<Integer>(item);
+			copySet = new HashSet<>(item);
 			copy.add(copySet);
 		}
 		return copy;
