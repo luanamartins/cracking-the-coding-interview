@@ -1,5 +1,7 @@
 package chapter2;
 
+import chapter2.data.LinkedListNode;
+
 /**
  * 
  * Delete Middle Node: Implement an algorithm to delete a node in the middle
